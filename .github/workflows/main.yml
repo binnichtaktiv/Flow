@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4
         with:
           path: main
           submodules: recursive
@@ -100,7 +100,7 @@ jobs:
           cd ..
           mv Flow_FBMS_${{ env.FLOW_TAG }}_clean.ipa Flow_FBMS_${{ env.FLOW_TAG }}.ipa
 
-      - uses: softprops/action-gh-release@v2.0.1
+      - uses: softprops/action-gh-release@v2
         with:
           tag_name: flow-fbms-${{ env.FLOW_TAG }}
           name: Flow_FBMS ${{ env.FLOW_TAG }}
